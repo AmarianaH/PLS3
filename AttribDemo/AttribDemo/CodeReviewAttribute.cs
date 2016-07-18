@@ -11,13 +11,7 @@ namespace AttribDemo
         public string ReviewName; 
         public DateTime ReviewDate; 
         public bool CodeApproved;
-       // public Attribute AttributeUsage;
-
-        //internal string func()
-        //{
-        //    return ($"{ReviewName} , {ReviewDate} , {CodeApproved} ");
-        //}
-
+       
         public CodeReviewAttribute(string Name, string Date, bool Approved)
         {
             ReviewName = Name;
