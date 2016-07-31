@@ -10,6 +10,7 @@ namespace CustomersApp
 {
     class Program
     {
+        //It is good that you used IEnumerable, but why didn't you use yield?
         static IEnumerable<Customer> GetCustomer(IEnumerable<Customer> customers, CustomerFilter CustFilter)
         {
             var l = new List<Customer>();
@@ -25,9 +26,11 @@ namespace CustomersApp
 
         static bool ifAtoK(Customer c)
         {
+            //What about small letters? use: "^[A-Ka-k]"
             return Regex.IsMatch(c.name, "^[A-K]");
         }
         
+        //The convention in C# for method to start with capital letters.
         static void printCollection(IEnumerable<Customer> coll)
         {
             foreach (Customer i in coll)
