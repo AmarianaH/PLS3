@@ -10,8 +10,10 @@ namespace MailSystem
     {
         public event EventHandler<MailArrivedEventArgs> MailArrived;
         
+        //Consider a better name
         protected virtual void OnMailArrived(MailArrivedEventArgs mae)
         {
+            //Nope. You missed the "elvis operator". it should be MailArrvied?.Invoke(this, mae). Notice the "?" before the dot.
             MailArrived.Invoke(this, mae);
         }
 
@@ -27,6 +29,8 @@ namespace MailSystem
     {
         public string Title { get; }
         public string Body { get;  }
+
+        //Consider better names
         public MailArrivedEventArgs(string t, string b)
         {
             Title = t;

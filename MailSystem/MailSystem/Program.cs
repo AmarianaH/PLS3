@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Threading;
 namespace MailSystem
 {
+    //Awesome job, really good!
     class Program
     {
 
